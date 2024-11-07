@@ -12,27 +12,27 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="students")
-public class students {
+public class Students {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id ; 
+	public Long id ; 
 	
-	@Column(name = "eng_name", nullable = false)
-	private String eng_name ; 
+	@Column(name = "eng_name", nullable = true)
+	public String eng_name ; 
 	
-	@Column(name = "email", nullable = false)
-	private String email ;
-	
-
-	@Column(name = "faculty", nullable = false)
-	private String faculty ;
+	@Column(name = "email", nullable = true)
+	public String email ;
 	
 
-	@Column(name = "type", nullable = false)
-	private String type ;
+	@Column(name = "faculty", nullable = true)
+	public String faculty ;
 	
 
-	@Column(name = "user_name", nullable = false)
-	private String user_name ;
+	@Column(name = "type", nullable = true)
+	public String type ;
+	
+
+	@Column(name = "user_name", nullable = true)
+	public String user_name ;
 }
